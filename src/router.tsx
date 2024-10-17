@@ -1,4 +1,5 @@
 import {createRootRoute, createRoute, createRouter, Link, Outlet} from "@tanstack/react-router";
+import SignUp from "@/pages/SignUp.tsx";
 
 const rootRoute = createRootRoute({
     component: () => (
@@ -9,11 +10,7 @@ const rootRoute = createRootRoute({
 const signUpRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: '/sign-up',
-    component: function SignUp() {
-        return (
-            <div>Sign Up</div>
-        )
-    }
+    component: SignUp,
 });
 
 const signInRoute = createRoute({
